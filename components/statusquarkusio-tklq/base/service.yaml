@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: statusquarkusio-tklq
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: statusquarkusio-tklq
+    app.kubernetes.io/part-of: status-quarkus-io
+  name: statusquarkusio-tklq
+spec:
+  ports:
+  - port: 9081
+    targetPort: 9081
+  selector:
+    app.kubernetes.io/instance: statusquarkusio-tklq
+status:
+  loadBalancer: {}
